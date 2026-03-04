@@ -1,5 +1,7 @@
 import { useContext } from "react"
 import { ThemeContext } from "../../context/ThemeContext"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 
 export default function Header({ titlePath }) {
   const { theme, toggleTheme } = useContext(ThemeContext)
@@ -22,13 +24,27 @@ export default function Header({ titlePath }) {
         {/* RIGHT SIDE - Actions */}
         <div className="flex items-center gap-4">
 
+{/* Dark Mode Toggle (Icon Based) */}
+          <button
+  onClick={toggleTheme}
+  className="ml-2
+  text-black dark:text-white
+  transition-all duration-200
+  hover:scale-110"
+>
+  <FontAwesomeIcon
+    icon={theme === "light" ? faMoon : faSun}
+    className="text-lg"
+  />
+</button>
+
           {/* Export Button */}
           <button
             className="border 
-            border-gray-300 dark:border-borderDark
+            border-gray-700 dark:border-borderDark
             text-gray-700 dark:text-gray-200
             px-4 py-2 rounded-lg text-sm
-            hover:bg-gray-100 dark:hover:bg-surface2
+            hover:bg-gray-300 dark:hover:bg-surface2
             transition"
           >
             Export Report
@@ -47,16 +63,9 @@ export default function Header({ titlePath }) {
             Stop Scan
           </button>
 
-          {/* Theme Toggle */}
-          <button
-  onClick={toggleTheme}
-  className="ml-2 px-3 py-2 text-xs rounded-lg
-  bg-black text-white
-  dark:bg-white dark:text-black
-  hover:opacity-80 transition"
->
-  {theme === "light" ? "Dark Mode" : "Light Mode"}
-</button>
+          
+
+
 
         </div>
       </div>

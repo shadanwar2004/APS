@@ -1,17 +1,27 @@
 import { useAuth } from "../../context/AuthContext"
 import { useNavigate } from "react-router-dom"
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { ThemeContext } from "../../context/ThemeContext"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGoogle, faApple, faMeta } from "@fortawesome/free-brands-svg-icons"
+import { 
+  faGoogle, 
+  faApple, 
+  faFacebook 
+} from "@fortawesome/free-brands-svg-icons"
+import { 
+  faMoon, 
+  faSun 
+} from "@fortawesome/free-solid-svg-icons"
 
 export default function Login() {
   const { login } = useAuth()
   const navigate = useNavigate()
+  const { theme, toggleTheme } = useContext(ThemeContext)
   const [isLogin, setIsLogin] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
     if (!e.currentTarget.checkValidity()) return
 
     login()
@@ -19,7 +29,21 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen flex font-inter">
+    <div className="min-h-screen flex font-inter relative">
+
+      {/* Dark Mode Toggle (Icon Based) */}
+      <button
+  onClick={toggleTheme}
+  className="fixed top-6 right-8 z-50
+  text-black dark:text-white
+  transition-all duration-200
+  hover:scale-110"
+>
+  <FontAwesomeIcon 
+    icon={theme === "light" ? faMoon : faSun} 
+    className="text-lg"
+  />
+</button>
 
       {/* LEFT SIDE */}
       <div className="hidden lg:flex w-1/2 relative overflow-hidden text-white">
@@ -52,19 +76,19 @@ export default function Login() {
           className="bg-white dark:bg-surface p-10 rounded-2xl shadow-2xl w-full max-w-md transition-all duration-300"
         >
           <h2 className="text-3xl font-semibold text-center mb-6 text-black dark:text-white">
-  {isLogin ? "Log in" : "Sign up"}
-</h2>
+            {isLogin ? "Log in" : "Sign up"}
+          </h2>
 
-<p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-6">
-  {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
-  <button
-    type="button"
-    onClick={() => setIsLogin(!isLogin)}
-    className="text-primary font-medium dark:text-primary"
-  >
-    {isLogin ? "Sign up" : "Log in"}
-  </button>
-</p>
+          <p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-6">
+            {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
+            <button
+              type="button"
+              onClick={() => setIsLogin(!isLogin)}
+              className="text-primary font-medium"
+            >
+              {isLogin ? "Sign up" : "Log in"}
+            </button>
+          </p>
 
           {/* Signup Fields */}
           {!isLogin && (
@@ -100,47 +124,50 @@ export default function Login() {
             className="w-full border p-3 rounded-xl mb-6 focus:ring-2 focus:ring-primary"
           />
 
+          {/* Submit Button */}
           <button
-  type="submit"
-  className="w-full bg-primary text-white py-3 rounded-xl font-medium 
-  hover:bg-green-500 transition-all duration-200"
->
-  {isLogin ? "Log in" : "Create account"}
-</button>
+            type="submit"
+            className="w-full bg-primary text-white py-3 rounded-xl font-medium 
+            hover:bg-green-500 transition-all duration-200"
+          >
+            {isLogin ? "Log in" : "Create account"}
+          </button>
 
-         <div className="flex gap-4 mt-6">
+          {/* Social Buttons */}
+          <div className="flex gap-4 mt-6">
 
-  {/* Apple */}
-  <button
-    type="button"
-    className="flex-1 bg-black text-white py-2 rounded-xl 
-    flex items-center justify-center gap-2 
-    hover:bg-gray-600 transition-all duration-200"
-  >
-    <FontAwesomeIcon icon={faApple} />
-  </button>
+            {/* Apple */}
+            <button
+              type="button"
+              className="flex-1 bg-black text-white py-2 rounded-xl 
+              flex items-center justify-center gap-2 
+              hover:bg-gray-700 transition-all duration-200"
+            >
+              <FontAwesomeIcon icon={faApple} />
+            </button>
 
-  {/* Google */}
-  <button
-    type="button"
-    className="flex-1 bg-red-600 text-white py-2 rounded-xl 
-    flex items-center justify-center gap-2 
-    hover:bg-gray-600 transition-all duration-200"
-  >
-    <FontAwesomeIcon icon={faGoogle} />
-  </button>
+            {/* Google */}
+            <button
+              type="button"
+              className="flex-1 bg-red-600 text-white py-2 rounded-xl 
+              flex items-center justify-center gap-2 
+              hover:bg-red-900 transition-all duration-200"
+            >
+              <FontAwesomeIcon icon={faGoogle} />
+            </button>
 
-  {/* Meta (Facebook) */}
-  <button
-    type="button"
-    className="flex-1 bg-blue-600 text-white py-2 rounded-xl 
-    flex items-center justify-center gap-2 
-    hover:bg-gray-600 transition-all duration-200"
-  >
-    <FontAwesomeIcon icon={faMeta} />
-  </button>
+            {/* Facebook / Meta */}
+            <button
+              type="button"
+              className="flex-1 bg-blue-600 text-white py-2 rounded-xl 
+              flex items-center justify-center gap-2 
+              hover:bg-blue-900 transition-all duration-200"
+            >
+              <FontAwesomeIcon icon={faFacebook} />
+            </button>
 
-</div>
+          </div>
+
         </form>
       </div>
     </div>
