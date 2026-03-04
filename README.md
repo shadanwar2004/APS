@@ -17,7 +17,7 @@ This project simulates an enterprise security scanning platform with authenticat
 ---
 
 ## 📁 Project Structure
-<img width="138" height="886" alt="image" src="https://github.com/user-attachments/assets/87fbaebc-c086-464f-b379-f18afbb5f76a" />
+<img width="138" height="886" alt="Screenshot 2026-03-04 100119" src="https://github.com/user-attachments/assets/9282f10d-b387-4d09-8349-c1c634cd5ad2" />
 
 
 
