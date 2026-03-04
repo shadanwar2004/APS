@@ -17,7 +17,8 @@ This project simulates an enterprise security scanning platform with authenticat
 ---
 
 ## 📁 Project Structure
-<img width="136" height="898" alt="image" src="https://github.com/user-attachments/assets/4c935425-9f75-4516-b379-d99fe521c4a2" />
+<img width="120" height="884" alt="image" src="https://github.com/user-attachments/assets/028e08e2-583e-462c-b5aa-7fddeba7b693" />
+
 
 
 
@@ -25,21 +26,14 @@ This project simulates an enterprise security scanning platform with authenticat
 
 1️⃣ Install dependencies
 
-```bash
 npm install
 
 2️⃣ Install Font Awesome (if not already installed)
-
-```bash
 npm install @fortawesome/react-fontawesome
 npm install @fortawesome/free-brands-svg-icons
 
 3️⃣ Start development server
-
-```bash
 npm run dev
-
-```bash
 http://localhost:5173
 
 
