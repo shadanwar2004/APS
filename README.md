@@ -17,52 +17,9 @@ This project simulates an enterprise security scanning platform with authenticat
 ---
 
 ## 📁 Project Structure
-src/
-├── app/
-│ ├── App.jsx
-│ └── ProtectedRoute.jsx
-│
-├── components/
-│ ├── layout/
-│ │ ├── Layout.jsx
-│ │ ├── Header.jsx
-│ │ └── Sidebar.jsx
-│ │
-│ ├── dashboard/
-│ │ ├── StatsCard.jsx
-│ │ └── ScanTable.jsx
-│ │
-│ ├── scan/
-│ │ ├── ProgressCircle.jsx
-│ │ ├── StepTracker.jsx
-│ │ ├── ConsolePanel.jsx
-│ │ └── FindingCard.jsx
-│ │
-│ └── ui/
-│ ├── Badge.jsx
-│ ├── Button.jsx
-│ ├── Card.jsx
-│ ├── Modal.jsx
-│ ├── Skeleton.jsx
-│ └── StatusChip.jsx
-│
-├── context/
-│ ├── AuthContext.jsx
-│ ├── ThemeContext.jsx
-│ └── ToastContext.jsx
-│
-├── pages/
-│ ├── Auth/Login.jsx
-│ ├── Dashboard/Dashboard.jsx
-│ └── ScanDetail/ScanDetail.jsx
-│
-├── data/scans.js
-├── main.jsx
-├── index.css
+<img width="136" height="898" alt="image" src="https://github.com/user-attachments/assets/4c935425-9f75-4516-b379-d99fe521c4a2" />
 
 
-
----
 
 ## 🛠 Installation & Setup
 
