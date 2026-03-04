@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <AuthProvider>
     <ThemeProvider>
       <ToastProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/APS">
           <App />
         </BrowserRouter>
       </ToastProvider>

@@ -7,7 +7,7 @@ export default function Dashboard() {
     <Layout titlePath="Scan / Private Assets / New Scan">
 
       {/* Org Info Row */}
-      <div className="flex flex-wrap gap-32 text-sm text-gray-500 mb-8">
+      <div className="flex flex-wrap gap-10 text-sm text-gray-500 mb-8">
         <p><span className="font-medium text-black dark:text-white">Org : Project XYZ</span></p>
         <p><span className="font-medium text-black dark:text-white">Owner : Shad Anwar</span></p>
         <p><span className="font-medium text-black dark:text-white">Total Scans : 100</span></p>
