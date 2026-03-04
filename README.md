@@ -41,9 +41,9 @@ http://localhost:5173
 
 🌟 Features :~
 // Authentication :
--- Signup & Login toggle form
--- Protected routes
--- Context-based auth management
+-Signup & Login toggle form
+-Protected routes
+-Context-based auth management
 
 // Dashboard :
 -- Severity stats cards
