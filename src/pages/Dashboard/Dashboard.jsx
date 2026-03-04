@@ -7,16 +7,19 @@ export default function Dashboard() {
     <Layout titlePath="Scan / Private Assets / New Scan">
 
       {/* Org Info Row */}
-      <div className="flex flex-wrap gap-10 text-sm text-gray-500 mb-8">
-        <p><span className="font-medium text-black dark:text-white">Org : Project XYZ</span></p>
-        <p><span className="font-medium text-black dark:text-white">Owner : Shad Anwar</span></p>
-        <p><span className="font-medium text-black dark:text-white">Total Scans : 100</span></p>
-        <p><span className="font-medium text-black dark:text-white">Scheduled : 1000</span></p>
-        <p><span className="font-medium text-black dark:text-white">Rescans : 100</span></p>
-        <p><span className="font-medium text-black dark:text-white">Failed Scans : 100</span></p>
-        <p><span className="font-medium text-black dark:text-white flex items-center gap-1">⟳ 10 mins ago</span></p>
-        
-      </div>
+      <div className="flex items-center justify-between text-sm text-gray-500 mb-8 whitespace-nowrap overflow-x-auto">
+        <div className="flex items-center gap-10 min-w-max">
+          <p><span className="font-medium text-black dark:text-white">Org : Project XYZ</span></p>
+          <p><span className="font-medium text-black dark:text-white">Owner : Shad Anwar</span></p>
+          <p><span className="font-medium text-black dark:text-white">Total Scans : 100</span></p>
+          <p><span className="font-medium text-black dark:text-white">Scheduled : 1000</span></p>
+          <p><span className="font-medium text-black dark:text-white">Rescans : 100</span></p>
+          <p><span className="font-medium text-black dark:text-white">Failed Scans : 100</span></p>
+          <p className="flex items-center gap-1">
+            <span className="font-medium text-black dark:text-white">⟳ 10 mins ago</span>
+          </p>
+        </div>
+      </div> {/* <-- THIS WAS MISSING */}
 
       {/* Severity Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">

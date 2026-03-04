@@ -56,17 +56,17 @@ export default function Sidebar() {
 
       {/* SIDEBAR */}
       <aside
-        className={`
-          fixed lg:relative z-50
-          w-64 h-screen lg:h-auto
-          bg-white dark:bg-surface
-          border-r border-gray-200 dark:border-borderDark
-          flex flex-col justify-between
-          transform transition-transform duration-300
-          ${open ? "translate-x-0" : "-translate-x-full"}
-          lg:translate-x-0
-        `}
-      >
+  className={`
+    fixed top-0 left-0 z-50
+    w-64 h-screen
+    bg-white dark:bg-surface
+    border-r border-gray-200 dark:border-borderDark
+    flex flex-col justify-between
+    transform transition-transform duration-300
+    ${open ? "translate-x-0" : "-translate-x-full"}
+    lg:translate-x-0
+  `}
+>
         {/* CLOSE BUTTON (Mobile Only) */}
         <div className="lg:hidden flex justify-end p-4">
           <button onClick={() => setOpen(false)}>
